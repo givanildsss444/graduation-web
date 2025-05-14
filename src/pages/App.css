@@ -5,13 +5,17 @@
   justify-content: center;
   align-items: center;
 
-  border: 2px solid black;
+
 
   
 
 }
 
 .info-more{
-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 
 }
