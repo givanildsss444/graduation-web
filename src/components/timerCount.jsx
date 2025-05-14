@@ -21,12 +21,9 @@ const targetDate = new Date('2026-01-31T19:00:00');
       }
 
       let months =
-        targetDate.getMonth() -
-          now.getMonth() +
-          12 * (targetDate.getFullYear() - now.getFullYear());
+        targetDate.getMonth() - now.getMonth() + 12 * (targetDate.getFullYear() - now.getFullYear());
 
-      let tempDate = new Date(now);
-tempDate.setMonth(now.getMonth() + months);
+      let tempDate = new Date(now);tempDate.setMonth(now.getMonth() + months);
 
       if (tempDate > targetDate) {
         months -= 1;

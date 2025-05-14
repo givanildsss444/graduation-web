@@ -1,0 +1,18 @@
+.acknowledge-link {
+  width: 250px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(79, 79, 79);
+  padding: 15px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.acknowledge-link:hover {
+  background-color: rgb(50, 50, 50); 
+  transform: scale(1.02);
+  cursor: pointer;
+}
