@@ -3,7 +3,7 @@ import NavegationBar from '../components/barNavegation.jsx'
 import AcknowLedge from '../components/acknowLedge.jsx'
 import './App.css'
 
-export default function App() {
+export default function Home() {
 
   return(
 

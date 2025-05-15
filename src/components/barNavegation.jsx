@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './barNavegation.css'
 
 export default function NavegationBar() {
@@ -6,7 +7,10 @@ export default function NavegationBar() {
 
         <div className="bar-navegationFull">
 
-            <a href="">Início</a>
+            <Link to='/'>
+                <a href="">Início</a>
+            </Link>
+
             <a href="">Turma</a>
             <a href="">Padrinhos</a>
             <a href="">Doe</a>            
