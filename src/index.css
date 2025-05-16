@@ -16,7 +16,8 @@ body{
 
   color-scheme: light dark; 
   color: rgba(255, 255, 255, 0.87);
-  background-color: #838383;
+  background: #0E418C;
+  background: linear-gradient(90deg,rgba(14, 65, 140, 1) 0%, rgba(7, 50, 122, 1) 61%, rgba(0, 35, 104, 1) 100%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

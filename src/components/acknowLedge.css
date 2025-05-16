@@ -3,7 +3,7 @@
   display: inline-block;
   color: white;
   text-decoration: none;
-  background-color: rgb(79, 79, 79);
+  background-color: #154f9d;
   padding: 15px;
   border-radius: 20px;
   text-align: center;
@@ -12,7 +12,7 @@
 }
 
 .acknowledge-link:hover {
-  background-color: rgb(50, 50, 50); 
+  background-color: #114180; 
   transform: scale(1.02);
   cursor: pointer;
 }

@@ -5,11 +5,14 @@
 
     align-items: center;
     justify-items: center;
-
-    width: 100%;
+    position: fixed;
+    
+    width: 90%;
     height: 70px;
+    margin: 20px;
 
-    background-color: rgb(79, 79, 79);
+    background-color: #416AA8;
+    border-radius: 20px;
     
 
 }
@@ -17,13 +20,26 @@
 .bar-navegationFull a{
     text-decoration: none;
     color: white;
+    
     transition: 300ms;
 
 }
 
 .bar-navegationFull a:hover{
     text-decoration: none;
-    color: rgb(186, 186, 186);
+    transform: scale(1.02);
     
 
+}
+
+.opition-nav-bar{
+    padding: 5px 15px ;
+    background-color: #154f9d;
+    border-radius: 20px;
+    transition: 200ms;
+    
+}
+
+.opition-nav-bar:hover{
+    background-color: #114180; 
 }
