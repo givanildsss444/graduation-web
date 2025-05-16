@@ -1,12 +1,9 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Formatura 2026 
 
-Currently, two official plugins are available:
+Este site foi criado com muito carinho pela turma do 3º ano de Informática do IFAL – Campus Rio Largo, com o propósito de reunir e eternizar os momentos mais marcantes da nossa jornada acadêmica. Aqui você encontrará informações sobre a nossa formatura, além de fotos, homenagens, histórico da turma, mensagens especiais e muito mais!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Desenvolvido utilizando React.js, o site reflete um pouco do que aprendemos ao longo dos três anos do curso técnico em Informática. Desde a idealização do layout até a programação das funcionalidades, tudo foi pensado com atenção aos detalhes, criatividade e dedicação — características que marcaram nossa caminhada no IFAL.
 
-## Expanding the ESLint configuration
+Além de servir como convite virtual e fonte de informações sobre a cerimônia, este espaço é também um símbolo da nossa evolução, da nossa união como turma e da realização de um sonho coletivo.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
