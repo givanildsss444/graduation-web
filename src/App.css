@@ -1,3 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.scrollTarget {
+  scroll-margin-top: 150px;
+}
+
+
+
 .containerFull{
   display: flex;
   flex-direction: column;
@@ -8,8 +18,7 @@
   gap: 10%;
 
   height: auto;
-  width: 100vw;
-
+  width: auto;
 
 
 }
@@ -34,9 +43,9 @@
   text-align: justify;
 
   height: auto;
-  width: 50vw;
+  width: 50%;
 
-  margin: 5%;
+  margin-top: 3%;
   padding: 5%;
 
 }
@@ -46,14 +55,13 @@
   display: flex;
   justify-content: center;
   
+  
   background-color: #001235;
 
-  padding-top: 50px;
+  margin-top: 50px;
 
-  height: 130vh;
-  width: 100vw;
-
-  
+  height: 120vh;
+  width: 100%;
 
 }
 
@@ -66,6 +74,54 @@
 
   height: 90vh;
   width: 70vw;
+
+  margin-top: 50px;
+  font-size: 18px;
   
 }
+
+.father-donate{
+  display: flex;
+  
+  
+  align-items: center;
+  justify-content: center;
+  
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  height: auto;
+  width: 100%;
+  background-color: #0C3E88;
+  
+}
+
+.donate{
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  overflow: auto;
+  
+}
+
+.info-donate{
+  width: 35vw;
+  font-size: 18px;
+  font-weight: 600;
+  flex-wrap: wrap;
+  text-align: justify;
+
+}
+
+#qr-code{
+  
+  width: 250px;
+  height: 250px;
+  max-width: 80vw;
+
+
+}
+
 

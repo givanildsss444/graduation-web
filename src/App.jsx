@@ -2,6 +2,7 @@ import TimerCount from './components/timerCount.jsx'
 import NavegationBar from './components/barNavegation.jsx'
 import AcknowLedge from './components/acknowLedge.jsx'
 import Turma from './assets/turma3ano.jpg'
+import QrCode from './assets/qrcodepix.jpg'
 
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import './App.css'
@@ -15,7 +16,7 @@ export default function Home() {
       <NavegationBar />
 
 
-      <div className='info-date'>
+      <div className='info-date' id='date'>
         
         <TimerCount />
         <AcknowLedge />
@@ -25,7 +26,7 @@ export default function Home() {
       {/* ---------------------------------------------------------------------------- */}
         <IoArrowDownCircleOutline  style={{height:'45px', width:'45px'}}/>
 
-      <div className='info-graduation'>
+      <div className='info-graduation scrollTarget' id='graduation'>
 
         <p>É com imensa alegria que convidamos você para celebrar a nossa conquista!</p>
         
@@ -50,7 +51,7 @@ export default function Home() {
 
       {/* ---------------------------------------------------------------------------- */}
 
-      <div className='father-info-class'>
+      <div className='father-info-class scrollTarget' id='class'>
 
           <div className='info-class'>
             
@@ -92,28 +93,33 @@ export default function Home() {
 
       {/* ---------------------------------------------------------------------------- */}
 
+      <div className='father-donate'>
+
+          <div className='donate'>
+
+            <img src={QrCode} alt="" id='qr-code' />
+
+            <div className='info-donate'>
 
 
+              <span>Ajude a tornar esse sonho possível! 💙 </span>
+              <p>A sua contribuição faz a diferença!</p>
+              <p>
+                Estamos organizando nossa formatura com muito carinho, e 
+                toda ajuda é bem-vinda para tornar esse momento ainda mais especial.
+              </p>
+              <p>Você pode contribuir com qualquer valor via Pix usando a chave abaixo ou escaneando o QR Code:</p>
+              <p><strong>ifalrlformatura2025@gmail.com</strong></p>
 
 
+            </div>
+
+          </div>
+
+      </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      {/* ---------------------------------------------------------------------------- */}
 
     </div>
 
