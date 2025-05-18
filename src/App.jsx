@@ -28,7 +28,9 @@ export default function Home() {
       </div>
 
       {/* ---------------------------------------------------------------------------- */}
-      <IoArrowDownCircleOutline  style={{height:'45px', width:'45px'}}/>
+      <a href="#graduation">
+      <IoArrowDownCircleOutline  style={{height:'45px', width:'45px', color:'white'}}/>
+      </a>
 
       <InfoGraduation />
 

@@ -1,6 +1,7 @@
 .thanks{
     display: flex;
     flex-direction: column;
+    
     gap: 30px;
 
     width: 70vw;
@@ -14,14 +15,16 @@
 
 .individual{
     display: flex;
+    justify-content: center;
     flex-direction: row;
     gap: 20px;
     align-items: center;
+    flex-wrap: wrap;
+    
 
 }
 
 .photo-individual{
-    width: 30vw;
     height: 30vh;
     border-radius: 100%;
     
