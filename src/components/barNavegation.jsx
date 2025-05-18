@@ -8,7 +8,6 @@ export default function NavegationBar() {
 
             
             <a href="#date">Início</a>
-            <a href="#graduation">Formatura</a>
             <a href="#class">Turma</a>
             <a href="#thanks">Agradecimentos</a>
             <a href="#qr-code">Doe</a>
