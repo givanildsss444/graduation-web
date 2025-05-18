@@ -6,8 +6,6 @@ html {
   scroll-margin-top: 150px;
 }
 
-
-
 .containerFull{
   display: flex;
   flex-direction: column;
@@ -34,94 +32,3 @@ html {
 
   
 }
-
-.info-graduation{
-  background-color: #001235;
-  border-radius: 20px;
-
-  font-size: 18px;
-  text-align: justify;
-
-  height: auto;
-  width: 50%;
-
-  margin-top: 3%;
-  padding: 5%;
-
-}
-
-
-.father-info-class{
-  display: flex;
-  justify-content: center;
-  
-  
-  background-color: #001235;
-
-  margin-top: 50px;
-
-  height: 120vh;
-  width: 100%;
-
-}
-
-.info-class{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  text-align: start;
-
-  height: 90vh;
-  width: 70vw;
-
-  margin-top: 50px;
-  font-size: 18px;
-  
-}
-
-.father-donate{
-  display: flex;
-  
-  
-  align-items: center;
-  justify-content: center;
-  
-  padding-top: 150px;
-  padding-bottom: 150px;
-
-  height: auto;
-  width: 100%;
-  background-color: #0C3E88;
-  
-}
-
-.donate{
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: center;
-  
-  overflow: auto;
-  
-}
-
-.info-donate{
-  width: 35vw;
-  font-size: 18px;
-  font-weight: 600;
-  flex-wrap: wrap;
-  text-align: justify;
-
-}
-
-#qr-code{
-  
-  width: 250px;
-  height: 250px;
-  max-width: 80vw;
-
-
-}
-
-

@@ -1,4 +1,4 @@
-import './barNavegation.css'
+import './styles/barNavegation.css'
 
 export default function NavegationBar() {
 
@@ -10,6 +10,7 @@ export default function NavegationBar() {
             <a href="#date">Início</a>
             <a href="#graduation">Formatura</a>
             <a href="#class">Turma</a>
+            <a href="#thanks">Agradecimentos</a>
             <a href="#qr-code">Doe</a>
 
         </div>

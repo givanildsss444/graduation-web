@@ -1,0 +1,28 @@
+.father-info-class{
+  display: flex;
+  justify-content: center;
+  
+  
+  background-color: #001235;
+
+  margin-top: 50px;
+
+  height: 120vh;
+  width: 100%;
+
+}
+
+.info-class{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  text-align: start;
+
+  height: 90vh;
+  width: 70vw;
+
+  margin-top: 50px;
+  font-size: 18px;
+  
+}

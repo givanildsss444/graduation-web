@@ -1,12 +1,12 @@
 
-import './acknowLedge.css'
+import './styles/acknowLedge.css'
 
 export default function AcknowLedge() {
 
     return(
 
         
-            <a href="" className='acknowledge-link'>Confirme sua presença!</a>
+            <a href="#registration" className='acknowledge-link'>Confirme sua presença!</a>
         
     );
     

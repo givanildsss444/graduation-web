@@ -1,0 +1,43 @@
+.father-donate{
+  display: flex;
+  
+  
+  align-items: center;
+  justify-content: center;
+  
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  height: auto;
+  width: 100%;
+  background-color: #0C3E88;
+  
+}
+
+.donate{
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  overflow: auto;
+  
+}
+
+.info-donate{
+  width: 35vw;
+  font-size: 18px;
+  font-weight: 600;
+  flex-wrap: wrap;
+  text-align: justify;
+
+}
+
+#qr-code{
+  
+  width: 250px;
+  height: 250px;
+  max-width: 80vw;
+
+
+}
