@@ -1,9 +1,7 @@
 import './styles/thanks.css'
 import cris from '../assets/cris.jpg'
 import lek from '../assets/lek.jpg'
-import pife from '../assets/pife.jpg'
 import david from '../assets/david.jpg'
-import elinelson from '../assets/elinelson.jpg'
 import pablo from '../assets/pablo.jpg'
 import ifal from '../assets/ifal.png'
 
@@ -36,15 +34,6 @@ export default function Thanks() {
 
             </div>
     
-            <div className='individual'>
-                
-                <img src={pife} alt="" className='photo-individual'/>
-                <div>
-                    <h1>Epifanio</h1>
-                    <p>Ao professor Epifânio, nossa mais sincera gratidão. Suas aulas de Português foram muito mais do que gramática e interpretação — foram momentos de reflexão, crescimento e descobertas. Com seu jeito único e acolhedor, nos ensinou a importância das palavras e do pensamento crítico. Obrigado por nos conduzir com sabedoria e paciência nessa jornada. Levaremos seus ensinamentos para a vida toda.</p>
-                </div>
-
-            </div>
 
             <div className='individual'>
                 
@@ -56,15 +45,6 @@ export default function Thanks() {
 
             </div>
 
-            <div className='individual'>
-                
-                <img src={elinelson} alt="" className='photo-individual'/>
-                <div>
-                    <h1>Elinelson</h1>
-                    <p>Ao professor Elinelson, nosso muito obrigado por nos mostrar que, mesmo nos cálculos mais complexos, existe beleza e lógica. Com sua paciência, bom humor e firmeza, enfrentamos juntos os desafios que a Matemática nos apresentou. Sua contribuição foi essencial para nosso crescimento intelectual e pessoal.</p>
-                </div>
-
-            </div>
 
             <div className='individual'>
                 
