@@ -1,15 +1,15 @@
-import TimerCount from '../components/timerCount.jsx';
-import NavegationBar from '../components/barNavegation.jsx';
-import AcknowLedge from '../components/acknowLedge.jsx';
-import InfoGraduation from '../components/infoGraduation.jsx';
-import InfoClass from '../components/infoClass.jsx';
-import Thanks from '../components/thanks.jsx';
-import Donate from '../components/donate.jsx';
-import Registration from '../components/registration.jsx';
+import TimerCount from './components/timerCount.jsx';
+import NavegationBar from './components/barNavegation.jsx';
+import AcknowLedge from './components/acknowLedge.jsx';
+import InfoGraduation from './components/infoGraduation.jsx';
+import InfoClass from './components/infoClass.jsx';
+import Thanks from './components/thanks.jsx';
+import Donate from './components/donate.jsx';
+import Registration from './components/registration.jsx';
 
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 
-import './Home.css'
+import './App.css'
 
 export default function Home() {
 
@@ -48,6 +48,9 @@ export default function Home() {
 
       {/* ---------------------------------------------------------------------------- */}
 
+      <Registration />
+
+      {/* ---------------------------------------------------------------------------- */}
 
     </div>
 
