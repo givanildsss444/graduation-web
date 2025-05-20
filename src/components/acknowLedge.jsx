@@ -1,12 +1,15 @@
-
 import './styles/acknowLedge.css'
+
+import { Link } from 'react-router-dom'
 
 export default function AcknowLedge() {
 
     return(
 
-        
-            <a href="#registration" className='acknowledge-link'>Confirme sua presença!</a>
+                <Link to ="/inscription">
+                <a className='acknowledge-link'>Confirme sua presença!</a>
+                </Link>
+         
         
     );
     
