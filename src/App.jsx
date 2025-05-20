@@ -11,7 +11,7 @@ import { IoArrowDownCircleOutline } from "react-icons/io5";
 
 import './App.css'
 
-export default function Home() {
+export default function App() {
 
   return(
 
