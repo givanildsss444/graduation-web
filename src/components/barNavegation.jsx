@@ -8,7 +8,7 @@ export default function NavegationBar() {
 
         <div className="bar-navegationFull">
 
-            <Link to='/Home'>
+            <Link to='https://formaturaifal2026.netlify.app'>
                 <a href="#date">Início</a>
             </Link>
             <a href="#class">Turma</a>

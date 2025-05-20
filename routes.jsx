@@ -11,8 +11,8 @@ export default function RoutesPages() {
 
             <Routes>
 
-                <Route path='/home' element={<Home />}/>
-                <Route path='/inscription' element={<Inscription />}/>
+                <Route path='https://formaturaifal2026.netlify.app' element={<Home />}/>
+                <Route path='https://formaturaifal2026.netlify.app/inscription' element={<Inscription />}/>
                 <Route path='*' element={<h1>error 404</h1>}/>
                 
 
