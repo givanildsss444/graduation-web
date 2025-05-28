@@ -17,11 +17,12 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    flex-wrap: wrap;
-    
 
+    gap: 20px;
+    width: 100%;
+
+    align-items: center;
+    flex-wrap:wrap;
 }
 
 .photo-individual{
