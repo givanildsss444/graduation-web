@@ -6,7 +6,7 @@ export default function AcknowLedge() {
     return(
 
         
-            <a className='acknowledge-link'>Confirme sua presença!</a>
+            <a href="#registration" className='acknowledge-link'>Confirme sua presença!</a>
         
     );
     

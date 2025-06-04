@@ -13,7 +13,7 @@ export default function Thanks() {
 
             <h1 style={{textAlign:'center'}}>Agradecimentos</h1>
 
-            <div className='individual'>
+            <div className='individual-even'>
 
                 
                 <img src={cris} alt="" className='photo-individual'/>
@@ -24,7 +24,7 @@ export default function Thanks() {
 
             </div>
 
-            <div className='individual'>
+            <div className='individual-odd'>
                 
                 <img src={lek} alt="" className='photo-individual'/>
                 <div>
@@ -35,7 +35,7 @@ export default function Thanks() {
             </div>
     
 
-            <div className='individual'>
+            <div className='individual-even'>
                 
                 <img src={david} alt="" className='photo-individual'/>
                 <div>
@@ -46,7 +46,7 @@ export default function Thanks() {
             </div>
 
 
-            <div className='individual'>
+            <div className='individual-odd'>
                 
                 <img src={pablo} alt="" className='photo-individual'/>
                 <div>

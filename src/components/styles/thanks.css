@@ -13,7 +13,7 @@
 
 }
 
-.individual{
+.individual-even{
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -22,12 +22,51 @@
     width: 100%;
 
     align-items: center;
-    flex-wrap:wrap;
+    
+}
+
+.individual-odd{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+
+    gap: 20px;
+    width: 100%;
+
+    align-items: center;
+    
+}
+
+.individual-odd h1{
+    text-align: end;
+
 }
 
 .photo-individual{
     height: 30vh;
     border-radius: 100%;
     
+}
 
+
+@media (max-width: 800px){
+    .individual-even{
+        flex-wrap: wrap;
+
+    }
+
+    .individual-even h1{
+        text-align: center;
+
+    }
+
+    .individual-odd{
+        flex-wrap: wrap;
+        
+    }
+
+    .individual-odd h1{
+        text-align: center;
+
+    }
 }
