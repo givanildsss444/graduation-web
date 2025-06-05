@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  height: 100dvh;
 }
 
 .scrollTarget {
@@ -15,7 +16,7 @@ html {
   align-items: center;
   gap: 10%;
 
-  height: auto;
+  height: 100dvh;
   width: auto;
 
 
