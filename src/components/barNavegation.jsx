@@ -1,4 +1,5 @@
 import './styles/barNavegation.css'
+import { Link } from 'react-router-dom'
 
 export default function NavegationBar() {
 
@@ -6,9 +7,16 @@ export default function NavegationBar() {
 
         <div className="bar-navegationFull">
 
-          
-            <a href="#date">Início</a>
-            <a href="#class">Turma</a>
+            <Link to='/home'>
+                <a>Início</a>
+            </Link>
+            
+            
+            <Link to='/class'>
+                <a>Turma</a>
+            </Link>
+           
+
             <a href="#thanks">Agradecimentos</a>
             <a href="#qr-code">Doe</a>
 

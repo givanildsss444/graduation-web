@@ -1,11 +1,11 @@
-import './styles/thanks.css'
+import './styles/InfoThanks.css'
 import cris from '../assets/cris.jpg'
 import lek from '../assets/lek.jpg'
 import david from '../assets/david.jpg'
 import pablo from '../assets/pablo.jpg'
 import ifal from '../assets/ifal.jpeg'
 
-export default function Thanks() {
+export default function InfoThanks() {
 
     return(
 

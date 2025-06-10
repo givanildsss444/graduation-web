@@ -1,6 +1,6 @@
-import './styles/registration.css'
+import './styles/InfoRegistration.css'
 
-export default function Registration() {
+export default function FormRegistration() {
 
     return(
 
