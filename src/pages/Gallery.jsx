@@ -27,9 +27,10 @@ export default function Gallery() {
       
             <div className='container-gallery'>
 
-                <h1>Nossos Melhores Momentos</h1>
 
                 <div className='section-one'>
+                    
+                <h1>Nossos Melhores Momentos</h1>
 
                     <img src={IMG1} alt="1" className='typeone'/>
                     <img src={IMG2} alt="2" className='typetwo'/>
