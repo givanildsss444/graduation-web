@@ -36,12 +36,12 @@ export default function Gallery() {
                     <img src={IMG2} alt="2" className='typetwo'/>
                     <img src={IMG3} alt="3" className='typeono' style={{height:150}}/>
                     <img src={IMG4} alt="4" className='typeone' style={{height:150}}/>
-                    <img src={IMG5} alt="5" className='typetwo'/>
                     <img src={IMG6} alt="6" className='typetwo'/>
                     <img src={IMG7} alt="7" className='typeone' style={{height:120}}/>
-                    <img src={IMG9} alt="9" className='typeone'style={{height:120}}/>
-                    <img src={IMG10} alt="10" className='typetwo'/>
-                    <img src={IMG8} alt="8" className='typetwo'/>
+                    <img src={IMG9} alt="9" className='typeone'style={{height:170}}/>
+                    <img src={IMG5} alt="5" className='typetwo' style={{height:170}}/>
+                    <img src={IMG8} alt="8" className='typetwo' style={{height:250}}/>
+                    <img src={IMG10} alt="10" className='typeone'/>
 
 
                 </div>
