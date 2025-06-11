@@ -5,12 +5,13 @@
   flex-wrap: wrap;
 
   background-color: #001235;
+  border-radius: 15px;
 
-  margin-top: 50px;
+  padding: 20px;
+  margin-top: 150px;
 
   height: auto;
-  width: 100%;
-
+  
 }
 
 .info-class{
@@ -19,14 +20,14 @@
   gap: 20px;
 
   text-align: justify;
+  align-items: center;
+  
 
   height: fit-content;
   width: 70vw;
 
   box-sizing: border-box;
-  padding-top: 50px;
-  padding-bottom: 50px;
-
+  
   font-size: 18px;
   
 }
