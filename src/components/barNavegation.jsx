@@ -7,7 +7,7 @@ export default function NavegationBar() {
 
         <div className="bar-navegationFull">
 
-            <Link to='/home'>
+            <Link to='/'>
                 <a>Início</a>
             </Link>
             
