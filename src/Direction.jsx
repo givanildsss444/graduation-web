@@ -9,7 +9,7 @@ export default function Direction() {
 
         <Routes>
 
-            <Route path='/home' index element={ <App /> } />
+            <Route path='/' index element={ <App /> } />
             <Route path='/class' element={ <Class /> } />
 
         </Routes>
