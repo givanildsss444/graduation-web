@@ -18,6 +18,11 @@ export default function NavegationBar() {
            
 
             <a href="#thanks">Agradecimentos</a>
+
+            <Link to='/gallery'>
+                <a>Galeria</a>
+            </Link>
+
             <a href="#qr-code">Doe</a>
 
         </div>
