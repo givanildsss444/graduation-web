@@ -3,13 +3,13 @@ import './styles/Gallery.css';
 import NavegationBar from '../components/barNavegation';
 
 import IMG1 from './img/IMG_5405.JPG';
-import IMG2 from './img/IMG_8913.JPG';
-import IMG3 from './img/IMG_6781.JPG'
+import IMG2 from './img/IMG_8913.jpg';
+import IMG3 from './img/IMG_6781.jpg'
 import IMG4 from './img/DSC03277.JPG'
-import IMG5 from './img/IMG_8796.JPG'
-import IMG6 from './img/IMG_8525.JPG'
-import IMG7 from './img/IMG_8652.JPG'
-import IMG8 from './img/IMG_8090.JPG'
+import IMG5 from './img/IMG_8796.jpg'
+import IMG6 from './img/IMG_8525.jpg'
+import IMG7 from './img/IMG_8652.jpg'
+import IMG8 from './img/IMG_8090.jpg'
 import IMG9 from './img/IMG_8346.JPG'
 import IMG10 from './img/IMG_9868.JPG'
 
