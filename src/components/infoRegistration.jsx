@@ -1,35 +1,95 @@
-import './styles/InfoRegistration.css'
+import { useState } from 'react';
+import './styles/InfoRegistration.css';
 
 export default function FormRegistration() {
+  const [formData, setFormData] = useState({
+    type: 'student',
+    name: '',
+    phone: '',
+    password: ''
+  });
 
-    return(
+  const correctPasswords = {
+    student: 'aluno2025',
+    guest: 'convidado2025',
+    server: 'servidor2025'
+  };
 
-        <div className='registration' id='registration'>
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
 
-            <h1>Confirme sua presença!!</h1>
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-            <div className='myself-inscription'>
+    if (formData.password !== correctPasswords[formData.type]) {
+      alert('Senha incorreta para o tipo selecionado!');
+      return;
+    }
 
-                <select name="type" id="">
-                    <option value="student">Aluno</option>
-                    <option value="guest">Convidado</option>
-                    <option value="server">Servidor</option>
-                </select>
+    const response = await fetch('', {
+      method: 'POST',
+      body: JSON.stringify({
+        type: formData.type,
+        name: formData.name,
+        phone: formData.phone
+      })
+    });
 
-                <label>
-                    Nome completo: 
-                    <input type="text" />
-                </label>
-                
-                <label>
-                    Telefone: 
-                    <input type="number" />
-                </label>
-                
-            </div>
+    const result = await response.json('../../netlify/functions/register');
+    alert(result.message);
+  };
 
-        </div>
+  return (
+    <div className='registration' id='registration'>
+      <h1>Confirme sua presença!!</h1>
 
-    )
+      <form className='myself-inscription' onSubmit={handleSubmit}>
+        <select name="type" value={formData.type} onChange={handleChange}>
+          <option value="student">Aluno</option>
+          <option value="guest">Convidado</option>
+          <option value="server">Servidor</option>
+        </select>
 
+        <label>
+          Nome completo:
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </label>
+
+        <label>
+          Telefone:
+          <input
+            type="number"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder='(82) 9 9999-9999'
+            required
+          />
+        </label>
+
+        <label>
+          Senha:
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </label>
+
+        <button type="submit">Confirmar Inscrição</button>
+      </form>
+    </div>
+  );
 }
