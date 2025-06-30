@@ -16,8 +16,9 @@ export default function NavegationBar() {
                 <a>Turma</a>
             </Link>
            
-
-            <a href="#thanks">Agradecimentos</a>
+            <Link to='/thanks'>
+                <a>Agradecimentos</a>
+            </Link>
 
             <Link to='/gallery'>
                 <a>Galeria</a>
