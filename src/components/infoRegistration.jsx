@@ -49,7 +49,7 @@ export default function FormRegistration() {
       <h1>Confirme sua presença!!</h1>
 
       <form className='myself-inscription' onSubmit={handleSubmit}>
-        <select name="type" value={formData.type} onChange={handleChange}>
+        <select name="Tipo" value={formData.type} onChange={handleChange}>
           <option value="student">Aluno</option>
           <option value="guest">Convidado</option>
           <option value="server">Servidor</option>
@@ -59,7 +59,7 @@ export default function FormRegistration() {
           Nome completo:
           <input
             type="text"
-            name="name"
+            name="Nome"
             value={formData.name}
             onChange={handleChange}
             required
@@ -70,7 +70,7 @@ export default function FormRegistration() {
           Telefone:
           <input
             type="text"
-            name="phone"
+            name="Telefone"
             value={formData.phone}
             onChange={handleChange}
             placeholder='(82) 9 9999-9999'
