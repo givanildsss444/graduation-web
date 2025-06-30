@@ -7,11 +7,11 @@ const supabase = createClient(
 
 exports.handler = async (event) => {
   try {
-    const { type, name, phone } = JSON.parse(event.body);
+    const { Tipo, Nome, Telefone } = JSON.parse(event.body);
 
     const { error } = await supabase
       .from('db-graduation')
-      .insert([{ type, name, phone }]);
+      .insert([{ Tipo, Nome, Telefone }]);
 
     if (error) {
       return {
