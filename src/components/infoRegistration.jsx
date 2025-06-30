@@ -39,8 +39,9 @@ export default function FormRegistration() {
       })
     });
 
-    const result = await response.json();
-    alert(result.message);
+    const text = await response.text();
+    console.log("Resposta crua do servidor:", text);
+    alert(text);
   };
 
   return (
