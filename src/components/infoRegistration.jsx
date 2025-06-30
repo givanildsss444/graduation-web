@@ -71,12 +71,11 @@ export default function FormRegistration() {
           Telefone:
           <InputMask
             mask="(99) 9 9999-9999"
-            name="phone"
             value={formData.phone}
             onChange={handleChange}
-            required
+            name="phone"
           >
-            {(inputProps) => <input type="text" {...inputProps} />}
+            {(inputProps) => <input {...inputProps} type="text" required />}
           </InputMask>
         </label>
 
