@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './styles/InfoRegistration.css';
-import InputMask from 'react-input-mask';
+
 
 export default function FormRegistration() {
   const [formData, setFormData] = useState({
@@ -67,17 +67,17 @@ export default function FormRegistration() {
           />
         </label>
 
-        <label>
-            Telefone:
-            <InputMask
-              mask="(99) 9 9999-9999"
-              value={formData.phone}
-              onChange={handleChange}
-              name="phone"
-            >
-              {(inputProps) => <input {...inputProps} type="text" required />}
-            </InputMask>
-          </label>
+         <label>
+          Telefone:
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="(99) 9 9999-9999"
+            required
+          />
+        </label>
 
         <label>
           Senha:
