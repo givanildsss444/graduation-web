@@ -10,13 +10,16 @@ exports.handler = async (event) => {
     const { type, name, phone } = JSON.parse(event.body);
 
     const { error } = await supabase
-      .from('inscricoes')
+      .from('bd-graduation') // CONFIRME O NOME EXATO DA TABELA
       .insert([{ type, name, phone }]);
 
     if (error) {
       return {
         statusCode: 500,
-        body: JSON.stringify({ message: 'Erro ao registrar', error: error.message })
+        body: JSON.stringify({
+          message: 'Erro ao registrar',
+          supabaseError: error.message // 👈 vai mostrar o erro real agora!
+        })
       };
     }
 
@@ -27,7 +30,10 @@ exports.handler = async (event) => {
   } catch (err) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: 'Erro interno no servidor', error: err.message })
+      body: JSON.stringify({
+        message: 'Erro interno no servidor',
+        internalError: err.message // 👈 caso algo dê errado no parse ou supabase
+      })
     };
   }
 };
