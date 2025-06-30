@@ -25,7 +25,7 @@ export default function FormRegistration() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (formData.password !== correctPasswords[formData.type]) {
+    if (formData.Senha !== correctPasswords[formData.Tipo]) {
       alert('Senha incorreta para o tipo selecionado!');
       return;
     }
