@@ -30,7 +30,7 @@ export default function FormRegistration() {
       return;
     }
 
-    const response = await fetch('', {
+    const response = await fetch('/.netlify/functions/register', {
       method: 'POST',
       body: JSON.stringify({
         type: formData.type,
@@ -39,7 +39,7 @@ export default function FormRegistration() {
       })
     });
 
-    const result = await response.json('../../netlify/functions/register');
+    const result = await response.json();
     alert(result.message);
   };
 
