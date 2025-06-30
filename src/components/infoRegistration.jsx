@@ -33,9 +33,9 @@ export default function FormRegistration() {
     const response = await fetch('/.netlify/functions/register', {
       method: 'POST',
       body: JSON.stringify({
-        type: formData.type,
-        name: formData.name,
-        phone: formData.phone
+        Tipo: formData.type,
+        Name: formData.name,
+        Telefone: formData.phone
       })
     });
 
