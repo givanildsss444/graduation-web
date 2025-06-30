@@ -3,10 +3,10 @@ import './styles/InfoRegistration.css';
 
 export default function FormRegistration() {
   const [formData, setFormData] = useState({
-    Tipo: 'student',
-    Nome: '',
-    Telefone: '',
-    Senha: ''
+    type: 'student',
+    name: '',
+    phone: '',
+    password: ''
   });
 
   const correctPasswords = {
@@ -18,14 +18,14 @@ export default function FormRegistration() {
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
-      [e.target.Nome]: e.target.value
+      [e.target.name]: e.target.value
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (formData.Senha !== correctPasswords[formData.Tipo]) {
+    if (formData.password !== correctPasswords[formData.type]) {
       alert('Senha incorreta para o tipo selecionado!');
       return;
     }
@@ -33,9 +33,9 @@ export default function FormRegistration() {
     const response = await fetch('/.netlify/functions/register', {
       method: 'POST',
       body: JSON.stringify({
-        Tipo: formData.Tipo,
-        Nome: formData.Nome,
-        Telefone: formData.Telefone
+        type: formData.type,
+        name: formData.name,
+        phone: formData.phone
       })
     });
 
@@ -49,7 +49,7 @@ export default function FormRegistration() {
       <h1>Confirme sua presença!!</h1>
 
       <form className='myself-inscription' onSubmit={handleSubmit}>
-        <select name="Tipo" value={formData.Tipo} onChange={handleChange}>
+        <select name="type" value={formData.type} onChange={handleChange}>
           <option value="student">Aluno</option>
           <option value="guest">Convidado</option>
           <option value="server">Servidor</option>
@@ -59,8 +59,8 @@ export default function FormRegistration() {
           Nome completo:
           <input
             type="text"
-            name="Nome"
-            value={formData.Nome}
+            name="name"
+            value={formData.name}
             onChange={handleChange}
             required
           />
@@ -70,8 +70,8 @@ export default function FormRegistration() {
           Telefone:
           <input
             type="text"
-            name="Telefone"
-            value={formData.Telefone}
+            name="phone"
+            value={formData.phone}
             onChange={handleChange}
             placeholder='(82) 9 9999-9999'
             required
@@ -83,7 +83,7 @@ export default function FormRegistration() {
           <input
             type="password"
             name="password"
-            value={formData.Senha}
+            value={formData.password}
             onChange={handleChange}
             required
           />

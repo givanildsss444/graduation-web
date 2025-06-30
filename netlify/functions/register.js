@@ -7,18 +7,18 @@ const supabase = createClient(
 
 exports.handler = async (event) => {
   try {
-    const { Tipo, Nome, Telefone } = JSON.parse(event.body);
+    const { type, name, phone } = JSON.parse(event.body);
 
     const { error } = await supabase
-      .from('db-graduation')
-      .insert([{ Tipo, Nome, Telefone }]);
+      .from('db-graduation') 
+      .insert([{ type, name, phone }]);
 
     if (error) {
       return {
         statusCode: 500,
         body: JSON.stringify({
           message: 'Erro ao registrar',
-          supabaseError: error.message 
+          supabaseError: error.message // 👈 vai mostrar o erro real agora!
         })
       };
     }
@@ -32,7 +32,7 @@ exports.handler = async (event) => {
       statusCode: 500,
       body: JSON.stringify({
         message: 'Erro interno no servidor',
-        internalError: err.message 
+        internalError: err.message // 👈 caso algo dê errado no parse ou supabase
       })
     };
   }
