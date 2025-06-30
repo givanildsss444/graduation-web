@@ -69,7 +69,7 @@ export default function FormRegistration() {
         <label>
           Telefone:
           <input
-            type="number"
+            type="text"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
