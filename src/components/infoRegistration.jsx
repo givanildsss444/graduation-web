@@ -3,10 +3,10 @@ import './styles/InfoRegistration.css';
 
 export default function FormRegistration() {
   const [formData, setFormData] = useState({
-    type: 'student',
-    name: '',
-    phone: '',
-    password: ''
+    Tipo: 'student',
+    Nome: '',
+    Telefone: '',
+    Senha: ''
   });
 
   const correctPasswords = {
@@ -18,7 +18,7 @@ export default function FormRegistration() {
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.Nome]: e.target.value
     }));
   };
 
@@ -33,9 +33,9 @@ export default function FormRegistration() {
     const response = await fetch('/.netlify/functions/register', {
       method: 'POST',
       body: JSON.stringify({
-        Tipo: formData.type,
-        Name: formData.name,
-        Telefone: formData.phone
+        Tipo: formData.Tipo,
+        Nome: formData.Nome,
+        Telefone: formData.Telefone
       })
     });
 
@@ -49,7 +49,7 @@ export default function FormRegistration() {
       <h1>Confirme sua presença!!</h1>
 
       <form className='myself-inscription' onSubmit={handleSubmit}>
-        <select name="Tipo" value={formData.type} onChange={handleChange}>
+        <select name="Tipo" value={formData.Tipo} onChange={handleChange}>
           <option value="student">Aluno</option>
           <option value="guest">Convidado</option>
           <option value="server">Servidor</option>
@@ -60,7 +60,7 @@ export default function FormRegistration() {
           <input
             type="text"
             name="Nome"
-            value={formData.name}
+            value={formData.Nome}
             onChange={handleChange}
             required
           />
@@ -71,7 +71,7 @@ export default function FormRegistration() {
           <input
             type="text"
             name="Telefone"
-            value={formData.phone}
+            value={formData.Telefone}
             onChange={handleChange}
             placeholder='(82) 9 9999-9999'
             required
@@ -83,7 +83,7 @@ export default function FormRegistration() {
           <input
             type="password"
             name="password"
-            value={formData.password}
+            value={formData.Senha}
             onChange={handleChange}
             required
           />
