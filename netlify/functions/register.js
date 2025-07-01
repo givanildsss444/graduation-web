@@ -16,24 +16,18 @@ exports.handler = async (event) => {
     if (error) {
       return {
         statusCode: 500,
-        body: JSON.stringify({
-          message: 'Erro ao registrar',
-          supabaseError: error.message // 👈 vai mostrar o erro real agora!
-        })
+        body: JSON.stringify('Erro ao registrar')
       };
     }
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: 'Inscrição realizada com sucesso!' })
+      body: JSON.stringify('Inscrição realizada com sucesso!' )
     };
   } catch (err) {
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        message: 'Erro interno no servidor',
-        internalError: err.message // 👈 caso algo dê errado no parse ou supabase
-      })
+      body: JSON.stringify('Erro interno no servidor')
     };
   }
 };
