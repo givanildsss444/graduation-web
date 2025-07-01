@@ -24,7 +24,8 @@ export default function NavegationBar() {
                 <a>Galeria</a>
             </Link>
 
-            <a href="#qr-code">Doe</a>
+
+            {/*<a href="#qr-code">Doe</a> */}
 
         </div>
 

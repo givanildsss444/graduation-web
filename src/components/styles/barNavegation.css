@@ -9,13 +9,15 @@
     z-index: 1000;
     
     width: 90%;
-    height: 70px;
+    height: 60px;
     margin: 20px;
     padding: 0px 10px;
 
     background-color: #416AA8;
     border-radius: 20px;
-    
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    font-size: 15px;
 
 }
 

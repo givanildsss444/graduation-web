@@ -1,16 +1,49 @@
-/* styles/InfoRegistration.css */
+.registration-father{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+
+  
+  
+}
+
+.design{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  height: 100%;
+  width: 100%;
+  
+  
+  border-top-left-radius: 60%;
+  
+
+}
 
 .registration {
   
+  display: flex;
+  flex-direction: column;
+  
+
+  
+
   background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
   padding: 32px 24px;
   border-radius: 16px;
-  max-width: 400px;
+  max-width: 300px;
   margin: 40px auto;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(12px); /* Deixa o fundo com efeito de vidro */
   color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+ 
+
 }
 
 .registration h1 {
@@ -50,21 +83,10 @@
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-.myself-inscription button {
-  margin-top: 10px;
-  padding: 12px;
-  background-color: #00b0ff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+#accept-button{
+  display: flex;
+  align-items: center;
 
-.myself-inscription button:hover {
-  background-color: #0090d0;
 }
 
 /* Responsivo */

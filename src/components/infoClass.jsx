@@ -48,7 +48,7 @@ export default function InfoClass() {
                 se tornou nossa segunda casa, e cada sala, cada laboratório, carrega um pedacinho da nossa história.
               </p>
 
-              <h1 style={{textAlign:'center'}}>Para sempre, IFAL</h1>
+              <h1 style={{textAlign:'center'}}>Para sempre IFAL</h1>
 
               <p>
                 Agora, ao encerrarmos esse ciclo, levamos conosco a certeza de que estamos prontos para os próximos desafios. 

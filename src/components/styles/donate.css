@@ -5,12 +5,18 @@
   align-items: center;
   justify-content: center;
   
+  margin: 40px;
   padding-top: 150px;
   padding-bottom: 150px;
-
+  
   height: auto;
   width: 100%;
-  background-color: #0C3E88;
+
+  background-color: #043987;
+
+  
+  border-bottom-right-radius: 45%;
+  border-top-left-radius: 45%;
   
 }
 

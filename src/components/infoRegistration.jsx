@@ -46,52 +46,64 @@ export default function FormRegistration() {
   };
 
   return (
-    <div className='registration' id='registration'>
-      <h1>Confirme sua presença!!</h1>
+    <div className='registration-father'>
 
-      <form className='myself-inscription' onSubmit={handleSubmit}>
-        <select name="type" value={formData.type} onChange={handleChange}>
-          <option value="student">Aluno</option>
-          <option value="guest">Convidado</option>
-          <option value="server">Servidor</option>
-        </select>
+      <div className='design'>
 
-        <label>
-          Nome completo:
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </label>
+        <div className='registration' id='registration'>
 
-         <label>
-          Telefone:
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            placeholder="(99) 9 9999-9999"
-            required
-          />
-        </label>
+          <h1>Confirme sua presença!!</h1>
 
-        <label>
-          Senha:
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </label>
+          <form className='myself-inscription' onSubmit={handleSubmit}>
+            <select name="type" value={formData.type} onChange={handleChange}>
+              <option value="student">Aluno</option>
+              <option value="guest">Convidado</option>
+              <option value="server">Servidor</option>
+            </select>
 
-        <button type="submit">Confirmar Inscrição</button>
-      </form>
+            <label>
+              Nome completo:
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </label>
+
+            <label>
+              Telefone:
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="(99) 9 9999-9999"
+                required
+              />
+            </label>
+
+            <label>
+              Senha:
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+            </label>
+
+            <label id='accept-button'>
+              <button className='acknowledge-link' type="submit">Confirmar Inscrição</button>
+            </label>
+          </form>
+
+        </div>
+
+      </div>
+
     </div>
   );
 }
