@@ -24,6 +24,8 @@ exports.handler = async (event) => {
       statusCode: 200,
       body: JSON.stringify('Inscrição realizada com sucesso!' )
     };
+
+    
   } catch (err) {
     return {
       statusCode: 500,
