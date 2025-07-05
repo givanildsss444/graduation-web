@@ -7,6 +7,7 @@ import InfoThanks from '../components/InfoThanks.jsx';
 import Donate from '../components/InfoDonate.jsx';
 import FormRegistration from '../components/infoRegistration.jsx';
 
+
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 
 import './styles/App.css'
@@ -37,6 +38,7 @@ export default function App() {
       {/* ---------------------------------------------------------------------------- */}
 
       {/*}<InfoClass />*/}
+
 
       {/* ---------------------------------------------------------------------------- */}
 

@@ -1,6 +1,12 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import Modal from 'react-modal';
 import './styles/InfoRegistration.css';
+import './styles/modal.css';
 
+import { GoAlertFill } from "react-icons/go";
+import { FaCheck } from "react-icons/fa";
+
+Modal.setAppElement('#root');
 
 export default function FormRegistration() {
   const [formData, setFormData] = useState({
@@ -9,6 +15,9 @@ export default function FormRegistration() {
     phone: '',
     password: ''
   });
+
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState(''); 
 
   const correctPasswords = {
     student: 'aluno2025',
@@ -24,13 +33,15 @@ export default function FormRegistration() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (formData.password !== correctPasswords[formData.type]) {
-      alert('Senha incorreta para o tipo selecionado!');
-      return;
-    }
+  if (formData.password !== correctPasswords[formData.type]) {
+    setModalMessage('erro');
+    setIsPopupOpen(true);
+    return;
+  }
 
+  try {
     const response = await fetch('/.netlify/functions/register', {
       method: 'POST',
       body: JSON.stringify({
@@ -41,9 +52,26 @@ export default function FormRegistration() {
     });
 
     const text = await response.text();
-    console.log("Resposta crua do servidor:", text);
-    alert(text);
-  };
+    console.log("Resposta do servidor:", text);
+
+    // Mostra pop-up de sucesso
+    setModalMessage('sucesso');
+    setIsPopupOpen(true);
+
+    // Se quiser limpar o formulário após sucesso:
+    setFormData({
+      type: 'student',
+      name: '',
+      phone: '',
+      password: ''
+    });
+
+  } catch (error) {
+    console.error("Erro ao enviar:", error);
+    setModalMessage('erro');
+    setIsPopupOpen(true);
+  }
+};
 
   return (
     <div className='registration-father'>
@@ -55,6 +83,7 @@ export default function FormRegistration() {
           <h1>Confirme sua presença!!</h1>
 
           <form className='myself-inscription' onSubmit={handleSubmit}>
+
             <select name="type" value={formData.type} onChange={handleChange}>
               <option value="student">Aluno</option>
               <option value="guest">Convidado</option>
@@ -62,6 +91,7 @@ export default function FormRegistration() {
             </select>
 
             <label>
+
               Nome completo:
               <input
                 type="text"
@@ -70,9 +100,11 @@ export default function FormRegistration() {
                 onChange={handleChange}
                 required
               />
+
             </label>
 
             <label>
+
               Telefone:
               <input
                 type="tel"
@@ -82,9 +114,11 @@ export default function FormRegistration() {
                 placeholder="(99) 9 9999-9999"
                 required
               />
+
             </label>
 
             <label>
+
               Senha:
               <input
                 type="password"
@@ -93,17 +127,51 @@ export default function FormRegistration() {
                 onChange={handleChange}
                 required
               />
+
             </label>
 
             <label id='accept-button'>
               <button className='acknowledge-link' type="submit">Confirmar Inscrição</button>
             </label>
+
           </form>
 
         </div>
 
       </div>
 
+
+      {/* Modal para senha incorreta */}
+      <Modal
+        isOpen={isPopupOpen}
+        onRequestClose={() => setIsPopupOpen(false)}
+        className={`modal-content ${modalMessage}`}
+        overlayClassName="modal-overlay"
+        contentLabel="Resultado da Inscrição"
+      >
+      
+        {modalMessage === 'erro' ? (
+          <>
+            <GoAlertFill style={{height:'20%', width:'20%'}}/>
+            <h2>Senha Incorreta</h2>
+            <p>Verifique se a senha corresponde ao tipo de usuário selecionado.</p>
+          </>
+        ) : (
+          <>
+          <FaCheck style={{height:'20%', width:'20%'}}/>
+            <h2> Inscrição Confirmada</h2>
+            <p>Seu nome foi registrado com sucesso!</p>
+          </>
+        )}
+        
+        <button className="close-button" onClick={() => setIsPopupOpen(false)}>
+          Fechar
+        </button>
+
+      </Modal>
+
     </div>
+
   );
+
 }
