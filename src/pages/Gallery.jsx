@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './styles/Gallery.css';
 import NavegationBar from '../components/barNavegation';
 
@@ -15,6 +16,8 @@ import IMG10 from './img/IMG_9868.JPG';
 const images = [IMG1, IMG2, IMG3, IMG4, IMG5, IMG6, IMG7, IMG8, IMG9, IMG10];
 
 export default function Gallery() {
+  const [selectedImg, setSelectedImg] = useState(null);
+
   return (
     <div className='gallery-wrapper'>
       <NavegationBar />
@@ -29,10 +32,19 @@ export default function Gallery() {
               src={img}
               alt={`moment-${index + 1}`}
               className='gallery-item'
+              onClick={() => setSelectedImg(img)}
             />
           ))}
         </div>
       </section>
+
+      {selectedImg && (
+        <div className='overlay' onClick={() => setSelectedImg(null)}>
+          <div className='modal-content' onClick={(e) => e.stopPropagation()}>
+            <img src={selectedImg} alt='ampliada' />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

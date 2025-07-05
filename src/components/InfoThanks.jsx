@@ -19,20 +19,32 @@ export default function InfoThanks() {
                 <img src={cris} alt="" className='photo-individual'/>
                 <div>
                     <h1>Cristiano</h1>
-                    <p>Agradecemos de coração ao professor Cristiano, que com sua paixão pela Biologia e dedicação ao ensino foi muito mais que um educador — foi um verdadeiro guia nessa caminhada. Sua presença, conselhos e incentivo foram fundamentais para que seguíssemos firmes até aqui. Obrigado por acreditar em nós, mesmo quando duvidamos de nós mesmos.</p>
+                    <p>
+                        Agradecemos de coração ao professor Cristiano, que com sua paixão pela Biologia e dedicação
+                        ao ensino foi muito mais que um educador — foi um verdadeiro guia nessa caminhada. Sua presença,
+                        conselhos e incentivo foram fundamentais para que seguíssemos firmes até aqui. Obrigado por
+                        acreditar em nós, mesmo quando duvidamos de nós mesmos.
+                    </p>
                 </div>
 
             </div>
 
-            <div className='individual-odd'>
-                
-                <img src={lek} alt="" className='photo-individual'/>
-                <div>
-                    <h1>Alexsander</h1>
-                    <p>Nossa gratidão ao professor Alexsander, que, mesmo enfrentando desafios pessoais tão difíceis, nunca deixou de nos inspirar com sua força, coragem e dedicação. Sua presença em sala de aula foi um verdadeiro exemplo de superação e amor pelo que faz. Obrigado por nos mostrar, na prática, o que significa não desistir.</p>
-                </div>
+            
+                <div className='individual-odd'>
+                    
+                    <img src={lek} alt="" className='photo-individual'/>
+                    <div>
+                        <h1>Alexsander</h1>
+                        <p>
+                            Nossa gratidão ao professor Alexsander, que, mesmo enfrentando desafios pessoais tão difíceis,
+                            nunca deixou de nos inspirar com sua força, coragem e dedicação. Sua presença em sala de aula
+                            foi um verdadeiro exemplo de superação e amor pelo que faz. Obrigado por nos mostrar, na prática,
+                            o que significa não desistir.
+                        </p>
+                    </div>
 
-            </div>
+                </div>
+          
     
 
             <div className='individual-even'>
@@ -40,7 +52,12 @@ export default function InfoThanks() {
                 <img src={david} alt="" className='photo-individual'/>
                 <div>
                     <h1>David</h1>
-                    <p>Agradecemos imensamente ao professor Davi por todo o conhecimento compartilhado nas áreas de Banco de Dados e Engenharia de Software. Sua forma clara e objetiva de ensinar nos guiou em momentos desafiadores e despertou em muitos de nós o interesse profundo pela lógica e pela organização das ideias. Obrigado por fazer parte dessa caminhada com tanta competência e dedicação!</p>
+                    <p>
+                        Agradecemos imensamente ao professor Davi por todo o conhecimento compartilhado nas áreas de Banco de Dados
+                        e Engenharia de Software. Sua forma clara e objetiva de ensinar nos guiou em momentos desafiadores e
+                        despertou em muitos de nós o interesse profundo pela lógica e pela organização das ideias.
+                        Obrigado por fazer parte dessa caminhada com tanta competência e dedicação!
+                    </p>
                 </div>
 
             </div>
@@ -51,7 +68,12 @@ export default function InfoThanks() {
                 <img src={pablo} alt="" className='photo-individual'/>
                 <div>
                     <h1>Pablo</h1>
-                    <p>Nossa gratidão ao professor Pablo, que nos guiou com maestria pelos caminhos das redes e da montagem e manutenção de computadores. Suas aulas práticas, suas explicações claras e seu apoio constante tornaram o aprendizado mais leve e eficiente. Obrigado por sempre estar disposto a nos ajudar e incentivar.</p>
+                    <p>
+                        Nossa gratidão ao professor Pablo, que nos guiou com maestria pelos caminhos das redes e da
+                        montagem e manutenção de computadores. Suas aulas práticas, suas explicações claras e seu apoio
+                        constante tornaram o aprendizado mais leve e eficiente. Obrigado por sempre estar disposto 
+                        a nos ajudar e incentivar.
+                    </p>
                 </div>
 
             </div>
