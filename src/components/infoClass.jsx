@@ -17,7 +17,7 @@ export default function InfoClass() {
 
               <h1 style={{textAlign:'center'}}>Onde tudo começou.</h1>
 
-              <img src={Turma} alt="logo" width={300} height={200} />
+              <img src={Turma} alt="logo" style={{width:'110%'}} />
 
               <p>
                 Ao longo desses três anos, a turma de Informática do IFAL Campus Rio Largo viveu uma jornada marcada 
@@ -28,7 +28,7 @@ export default function InfoClass() {
 
               
 
-              <video controls src={maladragem} type='video/mp4' width={320} height={200}/>
+              <video controls src={maladragem} type='video/mp4' style={{width:'110%'}}/>
 
               <h1 style={{textAlign:'center'}}>Nosso chão, nosso voo.</h1>
 
@@ -40,7 +40,7 @@ export default function InfoClass() {
 
               <h1 style={{textAlign:'center'}}>Fomos felizes aqui.</h1>
 
-              <video controls src={tempo} type='video/mp4' width={320} height={200}/>
+              <video controls src={tempo} type='video/mp4' style={{width:'110%'}}/>
 
               <p>
                 Não foram apenas os conhecimentos técnicos que moldaram nossa trajetória, mas também os valores, os momentos 

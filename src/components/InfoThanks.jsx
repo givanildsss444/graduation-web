@@ -1,8 +1,8 @@
 import './styles/InfoThanks.css'
 import cris from '../assets/cris.jpg'
-import lek from '../assets/lek.jpg'
+import lek from '../assets/lek.png'
 import david from '../assets/david.jpg'
-import pablo from '../assets/pablo.jpg'
+import pablo from '../assets/pablo.png'
 import ifal from '../assets/ifal.jpeg'
 
 export default function InfoThanks() {

@@ -44,7 +44,9 @@
 }
 
 .photo-individual{
-    height: 30vh;
+
+    height: 80%;
+    width: 80%;
     border-radius: 100%;
     
 }

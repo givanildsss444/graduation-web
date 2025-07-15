@@ -14,11 +14,11 @@ export default function InfoGraduation() {
           chegou o grande momento de comemorarmos juntos nossa formatura!
         </p>
 
-        <p>Local: Auditório Principal do IFAL – Campus Rio Largo</p>
+        <p>Local: Arena Champs Eventos</p>
 
-        <p>Data: 20 de dezembro de 2025</p>
+        <p>Data: 31 de janeiro de 2026</p>
 
-        <p>Horário: 18h00</p>
+        <p>Horário: 19h00</p>
 
         <p>
           Sua presença tornará esse momento ainda mais especial. 
