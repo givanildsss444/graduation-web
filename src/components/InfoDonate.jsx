@@ -10,7 +10,7 @@ Modal.setAppElement('#root');
 
 export default function Donate() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const pixKey = 'ifalrlformatura2025@gmail.com';
+  const pixKey = 'ifalrlformatura2026@gmail.com';
 
   const copyToClipboard = async () => {
     try {
