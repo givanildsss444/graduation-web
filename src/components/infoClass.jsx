@@ -28,7 +28,7 @@ export default function InfoClass() {
 
               
 
-              <video controls src={maladragem} type='video/mp4' style={{width:'110%'}}/>
+              <video controls src={maladragem} type='video/mp4' style={{width:'105%'}}/>
 
               <h1 style={{textAlign:'center'}}>Nosso chão, nosso voo.</h1>
 
