@@ -17,7 +17,7 @@ export default function InfoClass() {
 
               <h1 style={{textAlign:'center'}}>Onde tudo começou.</h1>
 
-              <img src={Turma} alt="logo" style={{width:'110%'}} />
+              <img src={Turma} alt="logo" style={{width:'105%'}} />
 
               <p>
                 Ao longo desses três anos, a turma de Informática do IFAL Campus Rio Largo viveu uma jornada marcada 
