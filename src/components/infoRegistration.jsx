@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import Modal from 'react-modal';
-import './styles/InfoRegistration.css';
-import './styles/modal.css';
+import React, { useState } from "react";
+import Modal from "react-modal";
+import "./styles/InfoRegistration.css";
+import "./styles/modal.css";
 
 import { GoAlertFill } from "react-icons/go";
 import { FaCheck } from "react-icons/fa";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 export default function FormRegistration() {
   const [formData, setFormData] = useState({
-    type: 'student',
-    name: '',
-    phone: '',
-    password: ''
+    type: "student",
+    name: "",
+    phone: "",
+    password: "",
   });
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [modalMessage, setModalMessage] = useState('');
+  const [modalMessage, setModalMessage] = useState("");
 
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
@@ -36,7 +36,7 @@ export default function FormRegistration() {
         body: JSON.stringify({
           type: formData.type,
           name: formData.name,
-          phone: formData.phone
+          phone: formData.phone,
         }),
       });
 
@@ -57,7 +57,6 @@ export default function FormRegistration() {
         phone: "",
         password: "",
       });
-
     } catch (error) {
       console.error("Erro ao enviar:", error);
       setModalMessage("erro");
@@ -89,22 +88,22 @@ export default function FormRegistration() {
               />
             </label>
 
-           <label>
-  Telefone:
-  <input
-    type="tel"
-    name="phone"
-    value={formData.phone}
-    onChange={(e) => {
-      const value = e.target.value.replace(/\D/g, ""); // remove tudo que não é número
-      if (value.length <= 13) {
-        setFormData((prev) => ({ ...prev, phone: value }));
-      }
-    }}
-    placeholder="(99) 9 9999-9999"
-    required
-  />
-</label>
+            <label>
+              Telefone:
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={(e) => {
+                  const value = e.target.value.replace(/\D/g, ""); 
+                  if (value.length <= 13) {
+                    setFormData((prev) => ({ ...prev, phone: value }));
+                  }
+                }}
+                placeholder="(99) 9 9999-9999"
+                required
+              />
+            </label>
 
             <label id="accept-button">
               <button className="acknowledge-link" type="submit">

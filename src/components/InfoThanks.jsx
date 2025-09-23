@@ -78,7 +78,7 @@ export default function InfoThanks() {
 
             </div>
 
-                <img src={ifal} alt="" />
+                <img src={ifal} alt=""  className='ifalImg'/>
 
             <p>
                 A todos que fazem parte do IFAL – Campus Rio Largo, nosso mais profundo agradecimento. Cada servidor, professor,
