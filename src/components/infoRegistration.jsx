@@ -89,17 +89,22 @@ export default function FormRegistration() {
               />
             </label>
 
-            <label>
-              Telefone:
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="(99) 9 9999-9999" max={11}
-                required
-              />
-            </label>
+           <label>
+  Telefone:
+  <input
+    type="tel"
+    name="phone"
+    value={formData.phone}
+    onChange={(e) => {
+      const value = e.target.value.replace(/\D/g, ""); // remove tudo que não é número
+      if (value.length <= 13) {
+        setFormData((prev) => ({ ...prev, phone: value }));
+      }
+    }}
+    placeholder="(99) 9 9999-9999"
+    required
+  />
+</label>
 
             <label id="accept-button">
               <button className="acknowledge-link" type="submit">
