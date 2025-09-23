@@ -10,11 +10,11 @@
     "server": "node server.js",
     "build": "vite build",
     "migrate:deploy": "prisma migrate deploy",
+    "generate": "prisma generate",
     "start": "npm-run-all migrate:deploy server"
   },
   "dependencies": {
     "@prisma/client": "^6.16.2",
-    "@supabase/supabase-js": "^2.50.2",
     "express": "^5.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

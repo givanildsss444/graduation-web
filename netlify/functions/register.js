@@ -1,35 +1,35 @@
-const { createClient } = require('@supabase/supabase-js');
+// netlify/functions/registrar.js
+import { PrismaClient } from "@prisma/client";
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_KEY
-);
+const prisma = new PrismaClient();
 
-exports.handler = async (event) => {
+export async function handler(event) {
   try {
-    const { type, name, phone } = JSON.parse(event.body);
-
-    const { error } = await supabase
-      .from('db-graduation') 
-      .insert([{ type, name, phone }]);
-
-    if (error) {
+    if (event.httpMethod !== "POST") {
       return {
-        statusCode: 500,
-        body: JSON.stringify('Erro ao registrar')
+        statusCode: 405,
+        body: JSON.stringify("Método não permitido"),
       };
     }
 
+    const { nome, telefone, tipo } = JSON.parse(event.body);
+
+    await prisma.usuario.create({
+      data: { nome, telefone, tipo },
+    });
+
     return {
       statusCode: 200,
-      body: JSON.stringify('Inscrição realizada com sucesso!' )
+      body: JSON.stringify("Usuário registrado com sucesso!"),
     };
-
-    
   } catch (err) {
+    console.error(err);
     return {
       statusCode: 500,
-      body: JSON.stringify('Erro interno no servidor')
+      body: JSON.stringify("Erro interno no servidor"),
     };
+  } finally {
+    // Evita conexões abertas demais no serverless
+    await prisma.$disconnect();
   }
-};
+}
