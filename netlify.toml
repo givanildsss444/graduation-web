@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  functions = "netlify/functions"
+  publish = "dist"  # pasta de saída do Vite (ou outra do seu build)
+
+[dev]
+  functions = "netlify/functions"

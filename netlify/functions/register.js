@@ -1,35 +1,36 @@
-// netlify/functions/registrar.js
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
 export async function handler(event) {
   try {
+    // Só permite POST
     if (event.httpMethod !== "POST") {
-      return {
-        statusCode: 405,
-        body: JSON.stringify("Método não permitido"),
-      };
+      return { statusCode: 405, body: "Método não permitido" };
     }
 
     const { nome, telefone, tipo } = JSON.parse(event.body);
 
-    await prisma.usuario.create({
+    // Cria usuário no Neon via Prisma
+    const novoUsuario = await prisma.usuario.create({
       data: { nome, telefone, tipo },
     });
 
     return {
       statusCode: 200,
-      body: JSON.stringify("Usuário registrado com sucesso!"),
+      body: JSON.stringify({
+        message: "Usuário registrado com sucesso!",
+        usuario: novoUsuario,
+      }),
     };
   } catch (err) {
     console.error(err);
     return {
       statusCode: 500,
-      body: JSON.stringify("Erro interno no servidor"),
+      body: JSON.stringify({ message: "Erro ao registrar usuário", error: err.message }),
     };
   } finally {
-    // Evita conexões abertas demais no serverless
+    // Fecha conexão do Prisma
     await prisma.$disconnect();
   }
 }
