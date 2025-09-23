@@ -30,13 +30,14 @@ export default function FormRegistration() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3001/register", {
+      // Aqui chamamos a função Netlify
+      const response = await fetch("/.netlify/functions/registrar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           type: formData.type,
-          name: formData.name,
-          phone: formData.phone,
+          nome: formData.name,
+          telefone: formData.phone,
         }),
       });
 
