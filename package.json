@@ -2,18 +2,13 @@
   "name": "aa",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "server": "node server.js",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev",
-    "prisma:seed": "node prisma/seeds.jsx",
-    "dev:all": "concurrently \"npm run server\" \"npm run dev\""
-  },
+  "type": "module","scripts": {
+  "dev": "vite",
+  "server": "node server.js",
+  "build": "vite build",
+  "migrate:deploy": "prisma migrate deploy",
+  "start": "npm run migrate:deploy && node server.js"
+},
   "dependencies": {
     "@prisma/client": "^6.16.2",
     "@supabase/supabase-js": "^2.50.2",
