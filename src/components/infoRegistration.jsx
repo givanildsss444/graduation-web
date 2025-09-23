@@ -96,7 +96,7 @@ export default function FormRegistration() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="(99) 9 9999-9999"
+                placeholder="(99) 9 9999-9999" max={11}
                 required
               />
             </label>
