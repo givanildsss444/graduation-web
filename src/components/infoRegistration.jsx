@@ -72,9 +72,9 @@ export default function FormRegistration() {
 
           <form className="myself-inscription" onSubmit={handleSubmit}>
             <select name="type" value={formData.type} onChange={handleChange}>
-              <option value="student">Aluno</option>
-              <option value="guest">Convidado</option>
-              <option value="server">Servidor</option>
+              <option value="Estudante">Aluno</option>
+              <option value="Convidado">Convidado</option>
+              <option value="Servidor">Servidor</option>
             </select>
 
             <label>
