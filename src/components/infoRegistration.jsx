@@ -96,7 +96,7 @@ export default function FormRegistration() {
                 value={formData.phone}
                 onChange={(e) => {
                   const value = e.target.value.replace(/\D/g, ""); 
-                  if (value.length <= 13) {
+                  if (value.length <= 16) {
                     setFormData((prev) => ({ ...prev, phone: value }));
                   }
                 }}
