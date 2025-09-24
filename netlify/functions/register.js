@@ -2,35 +2,33 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-export async function handler(event) {
+const handler = async (event) => {
   try {
-    // Só permite POST
-    if (event.httpMethod !== "POST") {
-      return { statusCode: 405, body: "Método não permitido" };
-    }
+    const body = JSON.parse(event.body);
+    const { nome, telefone, type } = body;
 
-    const { nome, telefone, tipo } = JSON.parse(event.body);
-
-    // Cria usuário no Neon via Prisma
-    const novoUsuario = await prisma.usuario.create({
-      data: { nome, telefone, tipo },
+    const usuario = await prisma.usuario.create({
+      data: {
+        nome,
+        telefone,
+        tipo: type,
+      },
     });
 
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: "Usuário registrado com sucesso!",
-        usuario: novoUsuario,
-      }),
+      body: JSON.stringify({ message: "Usuário criado!", usuario }),
     };
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error("Erro Prisma:", error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: "Erro ao registrar usuário", error: err.message }),
+      body: JSON.stringify({
+        message: "Erro ao cadastrar",
+        error: error.message,
+      }),
     };
-  } finally {
-    // Fecha conexão do Prisma
-    await prisma.$disconnect();
   }
-}
+};
+
+export { handler };

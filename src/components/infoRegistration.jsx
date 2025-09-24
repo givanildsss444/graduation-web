@@ -31,7 +31,7 @@ export default function FormRegistration() {
 
     try {
       // Aqui chamamos a função Netlify
-      const response = await fetch("/.netlify/functions/registrar", {
+      const response = await fetch("/.netlify/functions/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -56,7 +56,6 @@ export default function FormRegistration() {
         type: "student",
         name: "",
         phone: "",
-        password: "",
       });
     } catch (error) {
       console.error("Erro ao enviar:", error);
